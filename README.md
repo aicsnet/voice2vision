@@ -1,45 +1,38 @@
-# voice2vision
+# 🎙️ Audio-to-Image Visualizer
 
-# 🎤voice2vision(CLI)
+Turn voice into stunning visuals using Whisper + Stable Diffusion!
 
-This is a lightweight CLI app powered by OpenAI's Whisper model that transcribes audio files into text. It is designed to run in Hugging Face Spaces directly from GitHub, without requiring any web interface.
+## 🧠 What it does
 
-Features
+- Transcribes educational audio using OpenAI Whisper
+- Converts the text into a creative image prompt
+- Generates a vivid image with Stable Diffusion 2.1
 
-- Transcribes `.wav`, `.mp3`, `.m4a`, and other audio formats
-- Powered by [openai/whisper](https://github.com/openai/whisper)
-- Simple command-line interface
-- Deployed using Hugging Face Spaces
+🛠️ How to Run
 
-File Structure
-voice2vision-cli ├── app.py # Main script that runs transcription ├── requirements.txt # Dependencies ├── README.md # Project documentation
-
-How to Use (Locally or in HF Logs Tab)
-
-1. Add your audio file as `example.wav` (or update the filename in `app.py`)
-2. Run the following command:
+1. Clone the repository:
+2. bash
+git clone https://github.com/aicsnet/voice2vision.git
+cd audio-to-image-visualizer
+Install dependencies:
 
 bash
-python app.py
-You’ll get the transcribed text printed in your console.
 
-Requirements
+pip install -r requirements.txt
+Add your audio file (e.g., physics.m4a) to the root folder.
+
+Run the script:
+
+bash
+python main.py
+🔋 Requirements
 Python 3.8+
 
-ffmpeg (for audio preprocessing)
+NVIDIA GPU with at least 6GB VRAM
 
-Install Locally
-bash
-Copy
-Edit
-pip install -r requirements.txt
-Make sure ffmpeg is installed in your environment.
+CUDA 11.8+
 
+ffmpeg installed (needed by Whisper)
 
-Example Output
-arduino
-Transcription:
-"Quantum mechanics is a fundamental theory in physics that..."
-🧠 Credits
-OpenAI Whisper
-
+📷 Output
+The script will generate and display an image and save it as output_image.png.
