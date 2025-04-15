@@ -1,2 +1,7 @@
-openai-whisper
 torch
+torchaudio
+torchvision
+openai-whisper
+transformers
+diffusers
+accelerate
